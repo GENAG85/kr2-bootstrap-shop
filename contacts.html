@@ -3,86 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контактная информация учебного интернет-магазина.">
-  <title>Контакты — Учебный интернет-магазин</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
-  <meta property="og:image" content="https://genag85.github.io/kr1-html-css-shop/images/preview.jpg">
+  <meta name="description" content="Контакты ShopProject на Bootstrap.">
+  <title>Контакты — ShopProject Bootstrap</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="product.html">Товар</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="order.html">Заказ</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#reviews">Отзывы</a>
-          </li>
-        </ul>
-      </nav>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">ShopProject</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть навигацию"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li><li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li><li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a></li></ul></div>
     </div>
-  </header>
+  </nav>
 
-  <main id="main-content">
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current" aria-current="page">Контакты</span>
-    </nav>
-
-    <section class="section">
-      <div class="section__heading">
-        <h1 class="section__title">Контакты</h1>
-        <p class="section__description">Контактная информация учебного интернет-магазина.</p>
-      </div>
-
-      <div class="contacts-grid">
-        <article class="contact-card">
-          <h2 class="contact-card__title">Связаться с нами</h2>
-          <ul class="contact-card__list">
-            <li class="contact-card__item"><strong>Телефон:</strong> +7 (900) 000-00-00</li>
-            <li class="contact-card__item"><strong>E-mail:</strong> info@example.com</li>
-            <li class="contact-card__item"><strong>Адрес:</strong> г. Москва, учебный проект</li>
-          </ul>
-        </article>
-
-        <article class="contact-card contact-card--accent" id="feedback">
-          <h2 class="contact-card__title">Обратная связь</h2>
-          <p class="contact-card__text">Для оформления заявки используйте отдельную страницу заказа.</p>
-          <a class="button button--primary" href="order.html">Перейти к форме</a>
-        </article>
-      </div>
-    </section>
+  <main class="container py-4 py-lg-5">
+    <nav aria-label="Хлебные крошки" class="mb-4"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Главная</a></li><li class="breadcrumb-item active" aria-current="page">Контакты</li></ol></nav>
+    <h1 class="mb-4">Контакты</h1>
+    <div class="row g-4">
+      <div class="col-12 col-md-6"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5 card-title">Связь</h2><p class="mb-2"><strong>Телефон:</strong> +7 (900) 000-00-00</p><p class="mb-0"><strong>E-mail:</strong> info@example.com</p></div></div></div>
+      <div class="col-12 col-md-6"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5 card-title">Оформление заявки</h2><p class="card-text">Для оформления заказа перейдите к Bootstrap-форме.</p><a class="btn btn-primary" href="order.html">Перейти к форме</a></div></div></div>
+    </div>
   </main>
 
-  <footer class="site-footer" id="contacts">
-    <div class="site-footer__inner">
-      <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-      <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
-    </div>
-  </footer>
+  <footer class="footer-shop mt-auto py-4"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>&copy; 2026 ShopProject</span><span>КР2: Bootstrap</span></div></footer>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,238 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
-  <title>Каталог товаров — Учебный интернет-магазин</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
-  <meta property="og:image" content="https://genag85.github.io/kr1-html-css-shop/images/preview.jpg">
+  <meta name="description" content="Каталог товаров ShopProject на Bootstrap.">
+  <title>Каталог — ShopProject Bootstrap</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="product.html">Товар</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="order.html">Заказ</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="contacts.html">Контакты</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#reviews">Отзывы</a>
-          </li>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">ShopProject</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть навигацию"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main id="main-content">
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current" aria-current="page">Каталог</span>
+  <main class="container py-4 py-lg-5">
+    <nav aria-label="Хлебные крошки" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+      </ol>
     </nav>
 
-    <section class="section">
-      <div class="section__heading">
-        <h1 class="section__title">Каталог товаров</h1>
-        <p class="section__description">Учебный каталог с категориями, ценовым диапазоном и расширенными карточками товаров.</p>
-      </div>
-    </section>
+    <div class="mb-4">
+      <h1>Каталог товаров</h1>
+      <p class="text-secondary mb-0">Bootstrap-сетка, карточки, значки, формы и кнопки.</p>
+    </div>
 
-    <section class="catalog-layout">
-      <aside class="catalog-filters" aria-labelledby="filters-title">
-        <h2 class="catalog-filters__title" id="filters-title">Фильтры</h2>
+    <div class="row g-4 align-items-start">
+      <aside class="col-12 col-lg-3">
+        <div class="card shadow-sm position-sticky catalog-sidebar">
+          <div class="card-body">
+            <h2 class="h5 card-title">Фильтры</h2>
+            <form action="#" method="get">
+              <fieldset class="mb-4">
+                <legend class="fs-6 fw-semibold">Категория</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="all" id="category-all">
+                  <label class="form-check-label" for="category-all">Все товары</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="popular" id="category-popular">
+                  <label class="form-check-label" for="category-popular">Популярные</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="new" id="category-new">
+                  <label class="form-check-label" for="category-new">Новинки</label>
+                </div>
+              </fieldset>
 
-        <form class="catalog-filters__form" action="#" method="get">
-          <fieldset class="catalog-filters__group">
-            <legend class="catalog-filters__legend">Категория</legend>
-            <label class="catalog-filters__option">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="all">
-              <span>Все товары</span>
-            </label>
-            <label class="catalog-filters__option">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="popular">
-              <span>Популярные</span>
-            </label>
-            <label class="catalog-filters__option">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="new">
-              <span>Новинки</span>
-            </label>
-          </fieldset>
+              <fieldset class="mb-4">
+                <legend class="fs-6 fw-semibold">Цена</legend>
+                <label class="form-label" for="price-from">От</label>
+                <div class="input-group mb-3">
+                  <input class="form-control" id="price-from" name="price-from" type="number" min="0" placeholder="0">
+                  <span class="input-group-text">₽</span>
+                </div>
+                <label class="form-label" for="price-to">До</label>
+                <div class="input-group">
+                  <input class="form-control" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+                  <span class="input-group-text">₽</span>
+                </div>
+              </fieldset>
 
-          <fieldset class="catalog-filters__group">
-            <legend class="catalog-filters__legend">Цена</legend>
-            <label class="catalog-filters__field" for="price-from">От</label>
-            <input class="catalog-filters__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
-            <label class="catalog-filters__field" for="price-to">До</label>
-            <input class="catalog-filters__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
-          </fieldset>
-
-          <div class="catalog-filters__actions">
-            <button class="button button--primary" type="submit">Применить</button>
-            <button class="button button--secondary" type="reset">Сбросить</button>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit">Применить</button>
+                <button class="btn btn-outline-secondary" type="reset">Сбросить</button>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </aside>
 
-      <section class="catalog-products">
-        <div class="section__heading section__heading--compact">
-          <h2 class="section__title">Список товаров</h2>
-          <p class="section__description">Выберите товар, чтобы посмотреть характеристики и оформить заявку.</p>
-        </div>
-
-                <div class="products-grid">
-                <article class="product-card product-card--featured">
-          <img
-            class="product-card__image"
-            src="images/product-1.jpg"
-            alt="Нашивка F-15C Eagle"
-          >
-
-          <div class="product-card__meta">
-            <span class="product-card__badge product-card__badge--new">
-              Новинка
-            </span>
-
-            <span class="product-card__stock">
-              В наличии
-            </span>
+      <section class="col-12 col-lg-9">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="card h-100 shadow-sm">
+              <img src="images/product-1.jpg" class="card-img-top product-card-img" alt="F-15C Eagle Galm Team Patch">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between mb-2"><span class="badge text-bg-primary">Новинка</span><small class="text-success">В наличии</small></div>
+                <h2 class="h5 card-title">F-15C Eagle Galm Team Patch</h2>
+                <p class="card-text text-secondary">Тканевая авиационная нашивка.</p>
+                <p class="fw-bold fs-5 mt-auto">1000 руб.</p>
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              </div>
+            </article>
           </div>
-
-          <p class="product-card__category">
-            Категория: нашивки
-          </p>
-
-          <h3 class="product-card__title">
-            F-15C Eagle Galm Team Patch
-          </h3>
-
-          <p class="product-card__description">
-            Тканевая нашивка с изображением истребителя F-15C Eagle Galm Team.
-          </p>
-
-          <p class="product-card__price">
-            Цена: 1000 руб.
-          </p>
-
-          <a
-            class="button button--primary product-card__button"
-            href="product.html"
-          >
-            Подробнее
-          </a>
-        </article>
-
-        <article class="product-card">
-          <img
-            class="product-card__image"
-            src="images/product-2.png"
-            alt="Нашивка Galm Team"
-          >
-
-          <div class="product-card__meta">
-            <span class="product-card__badge product-card__badge--hit">
-              Хит
-            </span>
-
-            <span class="product-card__stock">
-              В наличии
-            </span>
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="card h-100 shadow-sm">
+              <img src="images/product-2.png" class="card-img-top product-card-img" alt="Trigger Patch">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between mb-2"><span class="badge text-bg-warning">Хит</span><small class="text-success">В наличии</small></div>
+                <h2 class="h5 card-title">Trigger Patch</h2>
+                <p class="card-text text-secondary">Нашивка с эмблемой пилота Trigger.</p>
+                <p class="fw-bold fs-5 mt-auto">1500 руб.</p>
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              </div>
+            </article>
           </div>
-
-          <p class="product-card__category">
-            Категория: нашивки
-          </p>
-
-          <h3 class="product-card__title">
-            Trigger Patch
-          </h3>
-
-          <p class="product-card__description">
-            Нашивка с эмблемой пилота Trigger.
-          </p>
-
-          <p class="product-card__price">
-            Цена: 1500 руб.
-          </p>
-
-          <a
-            class="button button--primary product-card__button"
-            href="product.html"
-          >
-            Подробнее
-          </a>
-        </article>
-
-        <article class="product-card product-card--discount">
-          <img
-            class="product-card__image"
-            src="images/product-3.png"
-            alt="Нашивка Mobius 1"
-          >
-
-          <div class="product-card__meta">
-            <span class="product-card__badge product-card__badge--discount">
-              Скидка
-            </span>
-
-            <span class="product-card__stock">
-              Осталось мало
-            </span>
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="card h-100 shadow-sm">
+              <img src="images/product-3.png" class="card-img-top product-card-img" alt="Mobius 1 Patch">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between mb-2"><span class="badge text-bg-danger">Скидка</span><small class="text-danger">Осталось мало</small></div>
+                <h2 class="h5 card-title">Mobius 1 Patch</h2>
+                <p class="card-text text-secondary">Нашивка авиационного подразделения Mobius 1.</p>
+                <p class="fw-bold fs-5 mt-auto">5000 руб.</p>
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              </div>
+            </article>
           </div>
-
-          <p class="product-card__category">
-            Категория: нашивки
-          </p>
-
-          <h3 class="product-card__title">
-            Mobius 1 Patch
-          </h3>
-
-          <p class="product-card__description">
-            Нашивка с символикой авиационного подразделения Mobius 1.
-          </p>
-
-          <p class="product-card__price">
-            Цена: 5000 руб.
-          </p>
-
-          <a
-            class="button button--primary product-card__button"
-            href="product.html"
-          >
-            Подробнее
-          </a>
-        </article>
         </div>
       </section>
-    </section>
+    </div>
   </main>
 
-  <footer class="site-footer" id="contacts">
-    <div class="site-footer__inner">
-      <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-      <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
-    </div>
-  </footer>
+  <footer class="footer-shop mt-auto py-4"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>&copy; 2026 ShopProject</span><span>КР2: Bootstrap</span></div></footer>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

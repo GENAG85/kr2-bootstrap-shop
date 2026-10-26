@@ -1,0 +1,76 @@
+/* 
+   КР2: точечные стили поверх Bootstrap
+    */
+
+:root {
+  --shop-accent: #0d6efd;
+  --shop-bg: #f5f7fb;
+  --shop-surface: #ffffff;
+  --shop-text: #212529;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--shop-bg);
+  color: var(--shop-text);
+}
+
+main {
+  flex: 1;
+}
+
+.hero-shop {
+  background: linear-gradient(135deg, #e7f1ff 0%, #ffffff 70%);
+  border: 1px solid #cfe2ff;
+}
+
+.product-card-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.product-detail-img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.catalog-sidebar {
+  top: 5.5rem;
+}
+
+.review-stars {
+  letter-spacing: 0.08em;
+}
+
+.footer-shop {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.footer-shop a {
+  color: #f8f9fa;
+}
+
+.required-mark {
+  color: #dc3545;
+}
+
+.table-responsive:focus-visible {
+  outline: 3px solid var(--shop-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 991.98px) {
+  .catalog-sidebar {
+    position: static !important;
+  }
+}
